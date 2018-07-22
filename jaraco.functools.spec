@@ -4,7 +4,7 @@
 #
 Name     : jaraco.functools
 Version  : 1.20
-Release  : 1
+Release  : 2
 URL      : https://files.pythonhosted.org/packages/d7/86/749c7bcc13ab0ffba6bf4ae0a062651f5005ef8f4355fc64a68fc5fcf854/jaraco.functools-1.20.tar.gz
 Source0  : https://files.pythonhosted.org/packages/d7/86/749c7bcc13ab0ffba6bf4ae0a062651f5005ef8f4355fc64a68fc5fcf854/jaraco.functools-1.20.tar.gz
 Summary  : jaraco.functools
@@ -66,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532293027
+export SOURCE_DATE_EPOCH=1532293299
 python3 setup.py build -b py3
 
 %install
