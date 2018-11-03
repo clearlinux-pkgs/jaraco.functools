@@ -4,26 +4,19 @@
 #
 Name     : jaraco.functools
 Version  : 1.20
-Release  : 2
+Release  : 3
 URL      : https://files.pythonhosted.org/packages/d7/86/749c7bcc13ab0ffba6bf4ae0a062651f5005ef8f4355fc64a68fc5fcf854/jaraco.functools-1.20.tar.gz
 Source0  : https://files.pythonhosted.org/packages/d7/86/749c7bcc13ab0ffba6bf4ae0a062651f5005ef8f4355fc64a68fc5fcf854/jaraco.functools-1.20.tar.gz
 Summary  : jaraco.functools
 Group    : Development/Tools
 License  : MIT
-Requires: jaraco.functools-python3
-Requires: jaraco.functools-license
-Requires: jaraco.functools-python
-Requires: Sphinx
-Requires: pytest
-Requires: six
+Requires: jaraco.functools-license = %{version}-%{release}
+Requires: jaraco.functools-python = %{version}-%{release}
+Requires: jaraco.functools-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-BuildRequires : pbr
-BuildRequires : pip
 BuildRequires : pluggy
 BuildRequires : py-python
 BuildRequires : pytest
-BuildRequires : python3-dev
-BuildRequires : setuptools
 BuildRequires : setuptools_scm
 BuildRequires : tox
 BuildRequires : virtualenv
@@ -43,7 +36,7 @@ license components for the jaraco.functools package.
 %package python
 Summary: python components for the jaraco.functools package.
 Group: Default
-Requires: jaraco.functools-python3
+Requires: jaraco.functools-python3 = %{version}-%{release}
 
 %description python
 python components for the jaraco.functools package.
@@ -66,14 +59,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532293299
-python3 setup.py build -b py3
+export SOURCE_DATE_EPOCH=1541266996
+python3 setup.py build
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/jaraco.functools
-cp LICENSE %{buildroot}/usr/share/doc/jaraco.functools/LICENSE
-python3 -tt setup.py build -b py3 install --root=%{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/jaraco.functools
+cp LICENSE %{buildroot}/usr/share/package-licenses/jaraco.functools/LICENSE
+python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
@@ -82,8 +75,8 @@ echo ----[ mark ]----
 %defattr(-,root,root,-)
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/jaraco.functools/LICENSE
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/jaraco.functools/LICENSE
 
 %files python
 %defattr(-,root,root,-)
