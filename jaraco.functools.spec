@@ -4,7 +4,7 @@
 #
 Name     : jaraco.functools
 Version  : 3.0.0
-Release  : 10
+Release  : 11
 URL      : https://files.pythonhosted.org/packages/40/63/d5911a9b3c80cf2f80b0ab143f54e3a72c98e20741acaf63b78a1410c561/jaraco.functools-3.0.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/40/63/d5911a9b3c80cf2f80b0ab143f54e3a72c98e20741acaf63b78a1410c561/jaraco.functools-3.0.0.tar.gz
 Summary  : Functools like those found in stdlib
