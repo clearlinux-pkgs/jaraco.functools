@@ -4,7 +4,7 @@
 #
 Name     : jaraco.functools
 Version  : 3.0.0
-Release  : 11
+Release  : 12
 URL      : https://files.pythonhosted.org/packages/40/63/d5911a9b3c80cf2f80b0ab143f54e3a72c98e20741acaf63b78a1410c561/jaraco.functools-3.0.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/40/63/d5911a9b3c80cf2f80b0ab143f54e3a72c98e20741acaf63b78a1410c561/jaraco.functools-3.0.0.tar.gz
 Summary  : Functools like those found in stdlib
@@ -25,7 +25,25 @@ BuildRequires : virtualenv
 
 %description
 .. image:: https://img.shields.io/pypi/v/jaraco.functools.svg
-:target: https://pypi.org/project/jaraco.functools
+   :target: https://pypi.org/project/jaraco.functools
+
+.. image:: https://img.shields.io/pypi/pyversions/jaraco.functools.svg
+
+.. image:: https://img.shields.io/travis/jaraco/jaraco.functools/master.svg
+   :target: https://travis-ci.org/jaraco/jaraco.functools
+
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :target: https://github.com/psf/black
+   :alt: Code style: Black
+
+.. .. image:: https://img.shields.io/appveyor/ci/jaraco/jaraco-functools/master.svg
+..    :target: https://ci.appveyor.com/project/jaraco-functools/skeleton/branch/master
+
+.. image:: https://readthedocs.org/projects/jaracofunctools/badge/?version=latest
+   :target: https://jaracofunctools.readthedocs.io/en/latest/?badge=latest
+
+Additional functools in the spirit of stdlib's functools.
 
 %package license
 Summary: license components for the jaraco.functools package.
@@ -48,6 +66,7 @@ python components for the jaraco.functools package.
 Summary: python3 components for the jaraco.functools package.
 Group: Default
 Requires: python3-core
+Provides: pypi(jaraco.functools)
 
 %description python3
 python3 components for the jaraco.functools package.
@@ -62,7 +81,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1577138322
+export SOURCE_DATE_EPOCH=1583160575
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
