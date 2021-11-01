@@ -4,7 +4,7 @@
 #
 Name     : jaraco.functools
 Version  : 3.4.0
-Release  : 31
+Release  : 32
 URL      : https://files.pythonhosted.org/packages/84/a4/d51170d05ac4eff15f416dbdb2c046c7cbaa7a9d0ad2d3bf9b27ad97b600/jaraco.functools-3.4.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/84/a4/d51170d05ac4eff15f416dbdb2c046c7cbaa7a9d0ad2d3bf9b27ad97b600/jaraco.functools-3.4.0.tar.gz
 Summary  : Functools like those found in stdlib
@@ -64,7 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1635743422
+export SOURCE_DATE_EPOCH=1635743492
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
